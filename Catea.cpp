@@ -44,7 +44,7 @@ Base *bases[] = {&base, &child_1, &child_2, &child_3, &child_4}; // Tablou de po
 
 std::string randomValues[5];
 
-short count = sizeof(bases) / sizeof(bases[0]); // calculam cate elemente are tabloul *bases
+unsigned short int count = sizeof(bases) / sizeof(bases[0]); // calculam cate elemente are tabloul *bases
 
 
 for (int i = 0; i < count ; i++) 
