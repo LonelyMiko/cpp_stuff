@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
 class Base 
 {
@@ -41,12 +40,28 @@ Child_2 child_2;
 Child_3 child_3;
 Child_4 child_4;
 
-Base *bases[] = {&base, &child_1, &child_2, &child_3, &child_4};
+Base *bases[] = {&base, &child_1, &child_2, &child_3, &child_4}; // Tablou de pointer catre toate classurile
 
-short count = sizeof(bases) / sizeof(bases[0]);
+std::string randomValues[5];
+
+short count = sizeof(bases) / sizeof(bases[0]); // calculam cate elemente are tabloul *bases
+
 
 for (int i = 0; i < count ; i++) 
 {
     std::cout << bases[i]->print() << std::endl;
 }
+
+for (int i = 0; i < 5; i++) 
+ {
+    int randomNumber = rand() % 5; // randomNumber primeste la fiecare iteratie o cifra < 5
+    randomValues[i] = bases[randomNumber]->print(); 
+ }
+ 
+ std::cout << "\n ---- Printarea Valorilor Random ----" << std::endl;
+ for (int i = 0; i < 5; i++) 
+ {
+    std::cout << randomValues[i] << std::endl;
+ }
+ 
 }
