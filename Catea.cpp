@@ -42,7 +42,6 @@ Child_3 child_3;
 Child_4 child_4;
 
 Base *bases[] = {&base, &child_1, &child_2, &child_3, &child_4};
-std::vector<std::string> randomValues;
 
 short count = sizeof(bases) / sizeof(bases[0]);
 
