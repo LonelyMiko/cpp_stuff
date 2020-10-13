@@ -38,13 +38,13 @@ public:
 
   void setLength (int length)
   {
-    assert (length < 20 && length > 0 && "length must be less than 20 and greater than or equal to 0");
+    assert (length < 20 && length >= 0 && "length must be less than 20 and greater than or equal to 0");
     this->m_length = length;
   }
 
   void setElement (int index, int element)
   {
-    assert (index < 20 && index > 0 && "index must be less than 20 and greater than or equal to 0");
+    assert (index < 20 && index >= 0 && "index must be less than 20 and greater than or equal to 0");
     m_arr[index] = element;
   }
 
@@ -61,7 +61,7 @@ public:
 
   int getElement (int index)
   {
-    assert (index < 20 && index > 0 && "index must be less than 20 and greater than or equal to 0");
+    assert (index < 20 && index >= 0 && "index must be less than 20 and greater than or equal to 0");
     return this->m_arr[index];
   }
 
@@ -130,7 +130,7 @@ Constructor && Destructor
   //@param length (int)
   array (int length)
   {
-    assert (length < 20 && length > 0 && "length must be less than 20 and greater than or equal to 0");
+    assert (length < 20 && length >= 0 && "length must be less than 20 and greater than or equal to 0");
     this->m_length = length;
 
     fillArray ();
