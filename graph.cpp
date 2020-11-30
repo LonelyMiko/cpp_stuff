@@ -39,7 +39,7 @@ struct DisjointSets
     // Constructor.
     DisjointSets(int n)
     {
-        // Allocate memory
+        // Alocăm memorie
         this->n = n;
         parent = new int[n+1];
         rnk = new int[n+1];
@@ -81,7 +81,7 @@ struct DisjointSets
     }
 };
 
- /* Functia ne returneaza costul arbului*/
+ /* Functia returneaza costul arbului*/
 
 int Graph::kruskalMST()
 {
@@ -108,14 +108,14 @@ int Graph::kruskalMST()
         //(Ciclul este creat dacă u și v aparțin aceluiași set)
         if (set_u != set_v)
         {
-            // Current edge will be in the MST
-            // so print it
+            // Marginea curentă va fi în arbore, 
+            // deci o tipărim
             cout << u << " , " << v << endl;
 
-            // Update MST weight
+            // Actualizăm costul arabului
             mst_wt += it->first;
 
-            // Merge two sets
+            // Combinăm 2 seturi 
             ds.merge(set_u, set_v);
         }
     }
